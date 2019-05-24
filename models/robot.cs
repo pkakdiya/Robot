@@ -101,6 +101,11 @@ namespace ToyRobotSimulator
                 }
             }
         }
+
+        public string GetReportData() 
+        {
+            return $"{_x} {_y} {_direction.ToString()}";
+        }
     }
 
     public class Board
@@ -138,5 +143,14 @@ namespace ToyRobotSimulator
         EAST,
         SOUTH,
         WEST
+    }
+
+    public class HelperClass 
+    {
+        public static Direction GetEnumFromString(string enumStr) 
+        {
+            System.Enum.TryParse<Direction>(enumStr, true, out Direction direction);
+            return direction;
+        }
     }
 }
