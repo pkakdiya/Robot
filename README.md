@@ -50,3 +50,8 @@ LEFT
 MOVE
 REPORT
 Output: 3,3,NORTH
+
+To Run the application please install .Net Core SDK
+1 dotnet restore - restore the nuget packages.
+2 dotnet msbuild - build the project.
+3 dotnet run - run the .net core application. 
